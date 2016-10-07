@@ -1,0 +1,242 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!--================================================================================
+    Item Name: Materialize - Material Design Admin Template
+    Version: 1.0
+    Author: GeeksLabs
+    Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================ -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Page Blank | Materialize - Material Design Admin Template</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+    <!-- CORE CSS-->
+
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="css/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+</head>
+
+<body class="cyan">
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="search-out">
+                            <input type="text" class="search-out-text">
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Login")" class="waves-effect waves-block waves-light">Intranet</a>
+                        </li>
+                        <!-- Dropdown Trigger -->
+                        @*<li>
+                                <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
+                            </li>*@
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+    <!-- END HEADER -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START MAIN -->
+    <div>
+        <!-- START WRAPPER -->
+        <div>
+
+
+            <!-- END LEFT SIDEBAR NAV-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!-- START CONTENT -->
+            <section id="content">
+
+                <!--breadcrumbs start-->
+                @*<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <h5 class="breadcrumbs-title">Blank Page</h5>
+                                    <ol class="breadcrumb">
+                                        <li><a href="index.html">Dashboard</a></li>
+                                        <li><a href="#">Pages</a></li>
+                                        <li class="active">Blank Page</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <!--breadcrumbs end-->
+                <!--start container-->
+
+
+
+                <section>
+                    <div class="parallax-container">
+                        <div class="parallax">
+                            <img src="~/images/Parallax/virgen3.jpg" />
+                        </div>
+                    </div>
+                    <div class="section white">
+                        <div class="row container">
+                            <h2 class="header">Parallax</h2>
+                            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                        </div>
+                    </div>
+                    <div class="parallax-container">
+                        <div class="parallax">
+                            <img src="~/images/Parallax/virgen1.jpg" />
+                        </div>
+                    </div>
+                    <div class="section white">
+                        <div class="row container">
+                            <h2 class="header">Parallax</h2>
+                            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                        </div>
+                    </div>
+                    <div class="parallax-container">
+                        <div class="parallax">
+                            <img src="~/images/Parallax/virgen2.jpg" />
+                        </div>
+                    </div>
+                </section>
+
+
+
+                @*<div class="container">
+                        <div class="section">
+
+                            <p class="caption">A Simple Blank Page to use it for your custome design and elements.</p>
+                            <div class="divider"></div>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>*@
+                <!--end container-->
+            </section>
+            <!-- END CONTENT -->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        </div>
+        <!-- END WRAPPER -->
+
+    </div>
+    <!-- END MAIN -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START FOOTER -->
+    @*<footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>Copyright © 2015 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">GeeksLabs</a> All rights reserved.</span>
+                    <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
+                </div>
+            </div>
+        </footer>*@
+    <br /><br />
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    <center>
+                        <h5 class="white-text">Ubicación</h5>
+                        <p class="grey-text text-lighten-4">Dirección : Jr. Chira 217 - Urb. El Molino</p>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.9810249275977!2d-79.02043666282498!3d-8.10534667327386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d87fcfc99f9%3A0xba6d83b7072ba3bd!2sChira%2C+Trujillo+13006!5e0!3m2!1ses!2spe!4v1475086276258" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </center>
+                </div>
+                <div class="col l4 s12">
+                    <center>
+                        <h5 class="white-text">Datos de la Hermandad</h5>
+                        <p class="grey-text text-lighten-4">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+                    </center>
+                </div>
+                <div class="col l4 s12" style="overflow: hidden;">
+                    <center>
+                        <h5 class="white-text">Contactanos</h5>
+
+                        <br>
+                        <a href="#" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Follow MaterializeCSS</a>
+                        <br>
+                        <div class="g-follow" data-annotation="bubble" data-height="24" data-href="#" data-rel="publisher"></div>
+                    </center>
+                </div>
+            </div>
+        </div><br />
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014-2016 Materialize, All rights reserved.
+                <a class="grey-text text-lighten-4 right" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">MIT License</a>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- chartist -->
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>
+
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+    </script>
+
+</body>
+
+</html>
