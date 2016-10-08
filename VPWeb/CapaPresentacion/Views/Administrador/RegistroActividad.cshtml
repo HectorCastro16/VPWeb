@@ -1,0 +1,114 @@
+﻿@model CapaEntidades.entActividad
+
+@{
+    ViewBag.Title = "RegistroActividad";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<h2>RegistroActividad</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>entActividad</legend>
+
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.idActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idActividad)
+            @Html.ValidationMessageFor(model => model.idActividad)
+        </div>*@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tituloActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tituloActividad)
+            @Html.ValidationMessageFor(model => model.tituloActividad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.descripcionActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.descripcionActividad)
+            @Html.ValidationMessageFor(model => model.descripcionActividad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fechaActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fechaActividad)
+            @Html.ValidationMessageFor(model => model.fechaActividad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.imagenActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.imagenActividad)
+            @Html.ValidationMessageFor(model => model.imagenActividad)
+            @Html.HiddenFor(model => model.imagenActividad)
+        </div>
+
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.estadoActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.estadoActividad)
+            @Html.ValidationMessageFor(model => model.estadoActividad)
+        </div>*@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.direccionActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.direccionActividad)
+            @Html.ValidationMessageFor(model => model.direccionActividad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.lugarInicio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.lugarInicio)
+            @Html.ValidationMessageFor(model => model.lugarInicio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.lugarFin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.lugarFin)
+            @Html.ValidationMessageFor(model => model.lugarFin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.horaInicio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.horaInicio)
+            @Html.ValidationMessageFor(model => model.horaInicio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.horaFin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.horaFin)
+            @Html.ValidationMessageFor(model => model.horaFin)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

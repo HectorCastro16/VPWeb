@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CapaEntidades.entActividad>
+
+@{
+    ViewBag.Title = "ListActividades";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<h2>ListActividades</h2>
+
+<p>
+    @Html.ActionLink("Create New ACTIVIDAD", "RegistroActividad")
+</p>
+<table>
+    <tr>
+        <th>
+           Nº
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tituloActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaActividad.toShordateString())
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imagenActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccionActividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugarInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugarFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horaFin)
+        </th>
+        <th></th>
+    </tr>
+@{ Int32 c=1;}
+@foreach (var item in Model) {
+    <tr>
+        @Html.HiddenFor(modelItem => item.idActividad)
+        <td>
+            @c            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tituloActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imagenActividad)
+            @Html.HiddenFor(modelItem => item.imagenActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionActividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugarInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugarFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaFin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.idActividad  }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+    c = c + 1;
+}
+
+</table>

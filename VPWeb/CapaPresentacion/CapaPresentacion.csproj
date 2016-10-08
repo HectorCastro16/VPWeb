@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\ImgActividades\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +237,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Administrador\PrincipalAdministrador.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MasterPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Administrador\ListActividades.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Administrador\RegistroActividad.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
