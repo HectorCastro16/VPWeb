@@ -91,6 +91,17 @@ namespace CapaNegocio
             }
         }
 
+        public entActividad DevuelveActividad(Int16 idActividad ) {
+            try
+            {
+                return datActividad.Instancia.DevuelveActividad(idActividad);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         #endregion metodos
 
     }

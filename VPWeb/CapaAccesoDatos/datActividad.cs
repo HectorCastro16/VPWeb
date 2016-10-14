@@ -96,6 +96,47 @@ namespace CapaAccesoDatos
 
         }
 
+        public entActividad DevuelveActividad(Int16 idActividad) {
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            entActividad a = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDevolverActividad", cn);
+                cmd.Parameters.AddWithValue("@prmintIdActividad", idActividad);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    a = new entActividad();
+                    a.idActividad = Convert.ToInt32(dr["idActividad"]);
+                    a.tituloActividad = dr["tituloActividad"].ToString();
+                    a.descripcionActividad = dr["descripcionActividad"].ToString();
+                    a.fechaActividad = Convert.ToDateTime(dr["fechaActividad"]);
+                    a.imagenActividad = dr["imagenActividad"].ToString();
+                    a.estadoActividad = dr["estadoActividad"].ToString();
+                    a.direccionActividad = dr["direccionActividad"].ToString();
+                    a.lugarInicio = dr["lugarInicio"].ToString();
+                    a.lugarFin = dr["lugarFin"].ToString();
+                    a.horaInicio = dr["horaInicio"].ToString();
+                    a.horaFin = dr["horaFin"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            finally {
+                cmd.Connection.Close();
+            }
+            return a;
+        
+
+        }
+
         #endregion metodos
 
 

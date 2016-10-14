@@ -22,7 +22,7 @@
             @Html.DisplayNameFor(model => model.descripcionActividad)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaActividad.toShordateString())
+            @Html.DisplayNameFor(model => model.fechaActividad)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.imagenActividad)
@@ -86,11 +86,26 @@
             @Html.DisplayFor(modelItem => item.horaFin)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.idActividad  }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "EditarActividad", new { idActividad = item.idActividad }) |
+            <a class="waves-effect waves-light btn modal-trigger  teal " href="#myModalEliminar" data-toggle='modal' data-target='#myModalEliminar' data-id="@Html.DisplayFor(modelItem => item.idActividad)">Delete</a>
+
         </td>
     </tr>
     c = c + 1;
 }
 
 </table>
+
+<div id="myModalEliminar" class="modal fade-in" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <form method="post" role="form" action="..............">
+        <div class="modal-content teal white-text">
+            <p> Lorem ipsum dolor sit amet</p>
+            <input type="text" name="txtUserId" id="Id" value="" />
+        </div>
+        <div class="modal-footer  teal lighten-4">
+            <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+        </div>
+    </form>
+</div>
+

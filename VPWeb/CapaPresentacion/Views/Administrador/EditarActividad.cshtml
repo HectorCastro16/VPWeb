@@ -1,27 +1,23 @@
 ﻿@model CapaEntidades.entActividad
 
 @{
-    ViewBag.Title = "RegistroActividad";
+    ViewBag.Title = "EditarActividad";
     Layout = "~/Views/MasterPage.cshtml";
 }
 
-<h2>RegistroActividad</h2>
+<h2>EditarActividad</h2>
 
-@using (Html.BeginForm("RegistroActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("EditarActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>entActividad</legend>
-
-        @*<div class="editor-label">
-            @Html.LabelFor(model => model.idActividad)
+        
+        <div >
+            @Html.HiddenFor(model => model.idActividad)            
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.idActividad)
-            @Html.ValidationMessageFor(model => model.idActividad)
-        </div>*@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.tituloActividad)
@@ -52,6 +48,14 @@
         </div>
         <div class="editor-label">
             <input type="file" class="form-control" name="archivo" />
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.estadoActividad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.estadoActividad)
+            @Html.ValidationMessageFor(model => model.estadoActividad)
         </div>
 
         <div class="editor-label">
@@ -94,8 +98,16 @@
             @Html.ValidationMessageFor(model => model.horaFin)
         </div>
 
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Anulado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Anulado)
+            @Html.ValidationMessageFor(model => model.Anulado)
+        </div>
+
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 }
