@@ -118,16 +118,39 @@ namespace CapaPresentacion.Controllers
             catch (Exception e)
             {
                 return RedirectToAction("EditarActividad", "Administrador", new { mensaje = e.Message, identificador = 2 });
-            }
-
-
-           
-
-
-
-            return View();
-        
+            }     
+            //return View();        
         }
+
+        public ActionResult DeleteActividad(Int16 idActividad) {
+
+            try
+            {
+                
+                int i = negActividad.Instancia.DelActividad(idActividad, 3);
+                if (i > 0){
+                    return RedirectToAction("ListActividades", new { mensaje = "SE ELIMINO CORRECTAMENTE !", identificador = 3 });
+                }
+                else {
+                    return RedirectToAction("ListActividades", new { mensaje = "NO SE PUEDO ELIMINAR", identificador = 2 });
+                }
+            }
+            catch (ApplicationException ex)
+            {
+                ViewBag.mensaje = ex.Message;
+                return RedirectToAction("ListActividades", "Administrador", new { mensaje = ex.Message, identificador = 1 });
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("ListActividades", "Administrador", new { mensaje = e.Message, identificador = 2 });
+            }
+        }
+
+        public ActionResult Pruebas() {
+            return View();
+        }
+
+        
 
 
     }

@@ -69,14 +69,14 @@ namespace CapaNegocio
             }
         }
 
-        public int DelActividad(entActividad a, Int16 TipoEdicion) {
+        public int DelActividad(Int16 idActividad, Int16 TipoEdicion) {
 
             try
             {
                 String cadXml = "";
 
                 cadXml += "<Actividad ";
-                cadXml += "idActividad='" + a.idActividad + "' ";
+                cadXml += "idActividad='" + idActividad.ToString() + "' ";
                 cadXml += "TipoEdicion='" + TipoEdicion + "'/>";
 
                 cadXml = "<root>" + cadXml + "</root>";

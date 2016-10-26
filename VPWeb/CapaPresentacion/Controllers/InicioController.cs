@@ -22,7 +22,9 @@ namespace CapaPresentacion.Controllers
 
         public ActionResult Login(String mensaje)
         {
+            DateTime fecha = negUsuario.Instancia.GetFastestNISTDate();
             ViewBag.mensaje = mensaje;
+            ViewBag.fecha = fecha;
             return View();
         }
 

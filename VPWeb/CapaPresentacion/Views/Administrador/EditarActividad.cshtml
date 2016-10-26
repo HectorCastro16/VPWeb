@@ -7,6 +7,28 @@
 
 <h2>EditarActividad</h2>
 
+@if (@ViewBag.mensaje != null)
+{
+    if (@ViewBag.identificador == 1)
+    {
+
+        <div class="card-panel green lighten-3"><strong>Atención!</strong> @ViewBag.mensaje</div>
+
+    }
+    else if (@ViewBag.identificador == 2)
+    {
+        <div class="alert alert-callout alert-danger" role="alert">
+            <strong>Ooops!</strong> @ViewBag.mensaje
+        </div>
+    }
+    else if (@ViewBag.identificador == 3)
+    {
+        <div class="alert alert-callout alert-success" role="alert">
+            <strong>Atención!</strong> @ViewBag.mensaje
+        </div>
+    }
+}
+
 @using (Html.BeginForm("EditarActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
