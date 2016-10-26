@@ -67,6 +67,50 @@ namespace CapaAccesoDatos
         
         }
 
+        public List<entActividad> ListaActividadesXAnio(Int16 idAct) {
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            List<entActividad> Lista = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spListaActividadesXAnio", cn);
+                cmd.Parameters.AddWithValue("@prmintNumeroAnio", idAct);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                Lista = new List<entActividad>();
+
+                while (dr.Read())
+                {
+                    entActividad a = new entActividad();
+                    a.idActividad = Convert.ToInt32(dr["idActividad"]);
+                    a.tituloActividad = dr["tituloActividad"].ToString();
+                    a.descripcionActividad = dr["descripcionActividad"].ToString();
+                    a.fechaActividad = Convert.ToDateTime(dr["fechaActividad"]);
+                    a.imagenActividad = dr["imagenActividad"].ToString();
+                    a.estadoActividad = dr["estadoActividad"].ToString();
+                    a.direccionActividad = dr["direccionActividad"].ToString();
+                    a.lugarInicio = dr["lugarInicio"].ToString();
+                    a.lugarFin = dr["lugarFin"].ToString();
+                    a.horaInicio = dr["horaInicio"].ToString();
+                    a.horaFin = dr["horaFin"].ToString();
+                    Lista.Add(a);
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return Lista;
+
+        }
+
         public int InsUpdDelActividad(String cadXML)
         {
             SqlCommand cmd = null;

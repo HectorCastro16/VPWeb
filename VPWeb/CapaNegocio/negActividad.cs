@@ -35,6 +35,19 @@ namespace CapaNegocio
             }
         }
 
+        public List<entActividad> ListaActividadesXAnio(Int16 idAct)
+        {
+            try
+            {
+                return datActividad.Instancia.ListaActividadesXAnio(idAct);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
         public int InsUpdActividad(entActividad a, Int16 TipoEdicion) {
 
             try

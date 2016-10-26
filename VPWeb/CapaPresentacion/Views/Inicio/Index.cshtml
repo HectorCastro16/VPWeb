@@ -1,9 +1,5 @@
-﻿@{
-    Layout = null;
-}
-
-
-
+﻿@using CapaEntidades
+@model IEnumerable<entActividad>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -113,38 +109,68 @@
                     </div>*@
                 <!--breadcrumbs end-->
                 <!--start container-->
-
-
-
                 <section>
-                    <div class="parallax-container">
-                        <div class="parallax">
-                            <img src="~/images/Parallax/virgen3.jpg" />
+
+                    @{
+                        int cant = 0;
+                        foreach (var m in Model)
+                        {
+                            if (cant < 2)
+                            {
+
+                                <div class="parallax-container">
+                                    <div class="parallax">
+                                        <img src="~/images/ImgActividades/@Html.DisplayFor(modelItem => m.imagenActividad)" />                                        
+                                    </div> 
+                                    <div class="container">
+                                        <div class="modal-footer">
+                                            <a class="btn waves-effect">button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section white">
+                                    <div class="row container">
+                                        <h2 class="header">@Html.DisplayFor(modelItem =>m.tituloActividad)</h2>
+                                        <p class="grey-text text-darken-3 lighten-3">@Html.DisplayFor(modelItem => m.descripcionActividad)</p>
+                                    </div>
+                                </div>
+                                cant += 1;
+                            }
+                        }
+                        <div class="parallax-container">
+                            <div class="parallax">
+                                <img src="~/images/Parallax/virgen2.jpg" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="section white">
-                        <div class="row container">
-                            <h2 class="header">Parallax</h2>
-                            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-                        </div>
-                    </div>
-                    <div class="parallax-container">
-                        <div class="parallax">
-                            <img src="~/images/Parallax/virgen1.jpg" />
-                        </div>
-                    </div>
-                    <div class="section white">
-                        <div class="row container">
-                            <h2 class="header">Parallax</h2>
-                            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-                        </div>
-                    </div>
-                    <div class="parallax-container">
-                        <div class="parallax">
-                            <img src="~/images/Parallax/virgen2.jpg" />
-                        </div>
-                    </div>
+                    }
                 </section>
+
+
+                @*<section>
+                        <div class="parallax-container">
+                            <div class="parallax">
+                                <img src="~/images/Parallax/virgen3.jpg" />
+                            </div>
+                        </div>
+                        <div class="section white">
+                            <div class="row container">
+                                <h2 class="header">Parallax</h2>
+                                <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                            </div>
+                        </div>
+                        <div class="parallax-container">
+                            <div class="parallax">
+                                <img src="~/images/Parallax/virgen1.jpg" />
+                            </div>
+                        </div>
+                        <div class="section white">
+                            <div class="row container">
+                                <h2 class="header">Parallax</h2>
+                                <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                            </div>
+                        </div>
+
+                    </section>*@
 
 
 

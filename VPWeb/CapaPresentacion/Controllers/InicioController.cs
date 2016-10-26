@@ -17,14 +17,13 @@ namespace CapaPresentacion.Controllers
         public ActionResult Index(String mensaje)
         {
             ViewBag.mensaje = mensaje;
-            return View();
+            List<entActividad> lista = negActividad.Instancia.ListaActividades();
+            return View(lista);
         }
 
         public ActionResult Login(String mensaje)
         {
-            DateTime fecha = negUsuario.Instancia.GetFastestNISTDate();
             ViewBag.mensaje = mensaje;
-            ViewBag.fecha = fecha;
             return View();
         }
 
