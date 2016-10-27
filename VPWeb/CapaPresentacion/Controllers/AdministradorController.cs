@@ -120,7 +120,7 @@ namespace CapaPresentacion.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction("EditarActividad", "Administrador", new { mensaje = e.Message, identificador = 2 });
+                return RedirectToAction("EditarActividad", "Administrador", new { idActividad=a.idActividad, mensaje = e.Message, identificador = 2 });
             }     
             //return View();        
         }

@@ -25,8 +25,8 @@ namespace CapaAccesoDatos
         public SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=hcserver.database.windows.net; Initial Catalog=bdvpweb;User ID=administrador; Password=BdVPWeb123456"; 
-            //cn.ConnectionString = "Data Source=.; Initial Catalog=BD_VP;User ID=sa; Password=123456";
+            //cn.ConnectionString = "Data Source=hcserver.database.windows.net; Initial Catalog=bdvpweb;User ID=administrador; Password=BdVPWeb123456"; 
+            cn.ConnectionString = "Data Source=.; Initial Catalog=BD_VP;User ID=sa; Password=123456";
             return cn;
         }
         #endregion metodos
