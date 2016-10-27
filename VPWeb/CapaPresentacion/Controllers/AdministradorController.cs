@@ -26,6 +26,7 @@ namespace CapaPresentacion.Controllers
             List<entActividad> Lista = negActividad.Instancia.ListaActividades();
             return View(Lista);
         }
+        [ValidateInput(false)]
         public ActionResult RegistroActividad(String mensaje, Int16? identificador)
         {
             ViewBag.mensaje = mensaje;
@@ -64,7 +65,7 @@ namespace CapaPresentacion.Controllers
             }
         }
 
-
+        [ValidateInput(false)]
         public ActionResult EditarActividad(Int16 idActividad, String mensaje, Int16? identificador)
         {
             ViewBag.mensaje = mensaje;
