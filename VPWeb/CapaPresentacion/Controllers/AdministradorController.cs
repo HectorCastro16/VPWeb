@@ -33,7 +33,7 @@ namespace CapaPresentacion.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost,ValidateInput(false)]
         public ActionResult RegistroActividad(entActividad a, HttpPostedFileBase archivo)
         {
 
@@ -80,7 +80,7 @@ namespace CapaPresentacion.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult EditarActividad(entActividad a, HttpPostedFileBase archivo)
         {
             try
