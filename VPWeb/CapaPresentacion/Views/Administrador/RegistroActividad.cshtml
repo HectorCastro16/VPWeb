@@ -5,7 +5,7 @@
     Layout = "~/Views/MasterPage.cshtml";
 }
 
-<h2>RegistroActividad</h2>
+<h2>Registro Actividad</h2>
 
 @{
     if (@ViewBag.mensaje != null)
@@ -25,99 +25,89 @@
     }
 }
 
-@using (Html.BeginForm("RegistroActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>entActividad</legend>
-
-        @*<div class="editor-label">
-            @Html.LabelFor(model => model.idActividad)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.idActividad)
-            @Html.ValidationMessageFor(model => model.idActividad)
-        </div>*@
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.tituloActividad)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.tituloActividad)
-            @Html.ValidationMessageFor(model => model.tituloActividad)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.descripcionActividad)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.descripcionActividad)
-            @Html.ValidationMessageFor(model => model.descripcionActividad)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.fechaActividad)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.fechaActividad)
-            @Html.ValidationMessageFor(model => model.fechaActividad)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.imagenActividad)
-        </div>
-        <div class="editor-label">
-            <input type="file" class="form-control" name="archivo" />
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.direccionActividad)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.direccionActividad)
-            @Html.ValidationMessageFor(model => model.direccionActividad)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.lugarInicio)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.lugarInicio)
-            @Html.ValidationMessageFor(model => model.lugarInicio)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.lugarFin)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.lugarFin)
-            @Html.ValidationMessageFor(model => model.lugarFin)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.horaInicio)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.horaInicio)
-            @Html.ValidationMessageFor(model => model.horaInicio)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.horaFin)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.horaFin)
-            @Html.ValidationMessageFor(model => model.horaFin)
-        </div>
-
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
-
+<div class="row">
+    @using (Html.BeginForm("RegistroActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data", @class = "col s12" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12 m4">
+                        @Html.TextBoxFor(model => model.tituloActividad, new { @id = "tituloActividad", @class = "validate", @type = "text" })
+                        <label for="tituloActividad" data-error="Incorrecto" data-success="Correcto">Titulo Actividad</label>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        @Html.TextBoxFor(model => model.descripcionActividad, new { @id = "descripcionActividad", @class = "validate", @type = "text" })
+                        <label for="descripcionActividad" data-error="Incorrecto" data-success="Correcto">Descripcion Actividad</label>
+                    </div>
+                    <div class="section scrollspy  col s12 m4">
+                        <label for="fechaActividad">Fecha Actividad</label>
+                        @Html.TextBoxFor(model => model.fechaActividad, new { @id = "fechaActividad", @class = "datepicker validate", @type = "text" })
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="section scrollspy col s12 m4">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" name="archivo">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        @Html.TextBoxFor(model => model.direccionActividad, new { @id = "direccionActividad", @class = "validate", @type = "text" })
+                        <label for="direccionActividad" data-error="Incorrecto" data-success="Correcto">Direccion Actividad</label>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        @Html.TextBoxFor(model => model.lugarInicio, new { @id = "lugarInicio", @class = "validate", @type = "text" })
+                        <label for="lugarInicio" data-error="Incorrecto" data-success="Correcto">Lugar Inicio</label>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="input-field col s12 m4">
+                        @Html.TextBoxFor(model => model.lugarFin, new { @id = "lugarFin", @class = "validate", @type = "text" })
+                        <label for="lugarFin" data-error="Incorrecto" data-success="Correcto">Lugar Fin</label>
+                    </div>
+                    <div class="section scrollspy col s12 m4">
+                        <div class="col s6">
+                            <label for="horaInicio" data-error="Incorrecto" data-success="Correcto">Hora Inicio</label>
+                            @Html.TextBoxFor(model => model.horaInicio, new { @id = "horaInicio", @type = "time", @class = "validate" })
+                        </div>
+                        <div class="input-field col s6">
+                            <select name="sh1" class="validate">
+                                <option value="" disabled selected>Elegir una opción</option>
+                                <option value="A.M.">A.M.</option>
+                                <option value="P.M.">P.M.</option>                                
+                            </select>
+                        </div>                        
+                    </div>
+                    <div class="section scrollspy col s12 m4">
+                        <div class="col s6">
+                            <label for="horaFin" data-error="Incorrecto" data-success="Correcto">Hora Fin</label>
+                            @Html.TextBoxFor(model => model.horaFin, new { @id = "horaFin", @type = "time", @class = "validate" })
+                        </div>
+                        <div class="input-field col s6" >
+                            <select name="sh2" class="validate">
+                                <option value="" disabled selected>Elegir una opción</option>
+                                <option value="A.M.">A.M.</option>
+                                <option value="P.M.">P.M.</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+            </div>
+            <p>
+                <input type="submit" value="GUARDAR" />
+            </p>        
+    }
+</div>
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la lista", "ListActividades")
 </div>

@@ -36,7 +36,7 @@ namespace CapaPresentacion.Controllers
 
         [ValidateInput(false)]
         [HttpPost]
-        public ActionResult RegistroActividad(entActividad a, HttpPostedFileBase archivo)
+        public ActionResult RegistroActividad(entActividad a, HttpPostedFileBase archivo, String sh1, String sh2)
         {
 
             try
@@ -45,7 +45,9 @@ namespace CapaPresentacion.Controllers
                     a.imagenActividad = Path.GetFileName(archivo.FileName);
                 }else{
                     a.imagenActividad = "imgactividad.jpg";
-                }
+                }                
+                a.horaInicio = a.horaInicio + " " + sh1;
+                a.horaFin = a.horaFin + " " + sh2;
                 int i = negActividad.Instancia.InsUpdActividad(a, 1);
                 if (i > 0){
                     if (archivo != null && archivo.ContentLength > 0){

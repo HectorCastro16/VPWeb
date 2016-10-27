@@ -141,6 +141,7 @@
     <Content Include="images\Parallax\virgen1.jpg" />
     <Content Include="images\Parallax\virgen2.jpg" />
     <Content Include="images\Parallax\virgen3.jpg" />
+    <Content Include="images\pic_admin.png" />
     <Content Include="images\sample-1.jpg" />
     <Content Include="images\signature-scan.png" />
     <Content Include="images\style_typography_roboto.png" />
