@@ -68,7 +68,7 @@ namespace CapaNegocio
                 cadXml += "horaFin='" + a.horaFin + "' ";
                 cadXml += "TipoEdicion='" + TipoEdicion + "'/>";
 
-                cadXml = "<root>" + cadXml + "</root>";
+                cadXml = "<?xml version='1.0' encoding='ISO-8859-1'?><root>" + cadXml + "</root>";
 
                 int i = datActividad.Instancia.InsUpdDelActividad(cadXml);
 

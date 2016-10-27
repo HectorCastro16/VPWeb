@@ -6,131 +6,72 @@
 }
 
 <h2>ListActividades</h2>
-@*<div class="card-panel green lighten-3"><strong>Atención!</strong> @ViewBag.mensaje</div>*@    
 
-@{
-    if (@ViewBag.mensaje != null)
+@if (@ViewBag.mensaje != null)
+{
+    if (@ViewBag.identificador == 1)
     {
-        if (@ViewBag.identificador == 1)
-        {
-            <div class="card-panel lime accent-3"><strong>Atención!</strong> @ViewBag.mensaje</div>
-        }
-        else if (@ViewBag.identificador == 2)
-        {
-            <div class="card-panel red lighten-3" role="alert"><strong>Ooops!</strong> @ViewBag.mensaje</div>
-        }
-        else if (@ViewBag.identificador == 3)
-        {
-            <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
-        }
+        <div class="card-panel lime accent-3"><strong>Atención!</strong> @ViewBag.mensaje</div>
+    }
+    else if (@ViewBag.identificador == 2)
+    {
+        <div class="card-panel red lighten-3" role="alert"><strong>Ooops!</strong> @ViewBag.mensaje</div>
+    }
+    else if (@ViewBag.identificador == 3)
+    {
+        <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
     }
 }
 
 <p>
-    @Html.ActionLink("Create New ACTIVIDAD", "RegistroActividad")
+    @Html.ActionLink("PUBLICAR NUEVA ACTIVIDAD", "RegistroActividad")
 </p>
-<table>
-    <tr>
-        <th>
-            Nº
-        </th>
-        <th>
-            Titulo
-        </th>
-        <th>
-            Descricion
-        </th>
-        <th>
-            Fecha
-        </th>
-        <th>
-            Imagen
-        </th>
-        <th>
-            Estado
-        </th>
-        <th>
-            Direccion
-        </th>
-        <th>
-            Lugar Inicio
-        </th>
-        <th>
-            Lugar Fin
-        </th>
-        <th>
-            Hora inicio 
-        </th>
-        <th>
-            Hora Fin
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    @{ Int32 c = 1;}
-    @foreach (var item in Model)
-    {
+<table class="responsive-table">
+    <thead>
         <tr>
-            @Html.HiddenFor(modelItem => item.idActividad)
-            <td>
-                @c
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tituloActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descripcionActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fechaActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imagenActividad)
-                @Html.HiddenFor(modelItem => item.imagenActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.estadoActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.direccionActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lugarInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lugarFin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.horaInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.horaFin)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "EditarActividad", new { idActividad = item.idActividad }, new { @class = "btn col s4 l2" })
-            </td>
-            <td>
-                @Html.ActionLink(".", "DeleteActividad", new { idActividad = item.idActividad }, new { @class = "btn tooltipped col s4 offset-s4 l2 offset-l1", @data_position = "top", @data_delay = "50", @data_tooltip = "Eliminar" })
-            </td>
+            <th> Nº</th>
+            <th>Titulo</th>
+            <th>Descricion</th>
+            <th>Fecha</th>
+            <th>Imagen</th>
+            <th>Estado</th>
+            <th>Direccion</th>
+            <th>Lugar Inicio</th>
+            <th>Lugar Fin</th>
+            <th>Hora inicio</th>
+            <th>Hora Fin</th>
+            <th></th>
+            <th></th>
         </tr>
-        c = c + 1;
-    }
-
+    </thead>
+    <tbody>
+        @{ Int32 c = 1;}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.idActividad)
+                    @c
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.tituloActividad)</td>
+                <td>@Html.DisplayFor(modelItem => item.descripcionActividad)</td>
+                <td>@Html.DisplayFor(modelItem => item.fechaActividad)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imagenActividad)
+                    @Html.HiddenFor(modelItem => item.imagenActividad)
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.estadoActividad)</td>
+                <td>@Html.DisplayFor(modelItem => item.direccionActividad)</td>
+                <td>@Html.DisplayFor(modelItem => item.lugarInicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.lugarFin)</td>
+                <td>@Html.DisplayFor(modelItem => item.horaInicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.horaFin)</td>
+                <td>@Html.ActionLink("Editar", "EditarActividad", new { idActividad = item.idActividad }, new { @class = "btn col s4 l2" })</td>
+                <td>@Html.ActionLink(".", "DeleteActividad", new { idActividad = item.idActividad }, new { @class = "btn tooltipped col s4 offset-s4 l2 offset-l1", @data_position = "top", @data_delay = "50", @data_tooltip = "Eliminar" })</td>
+            </tr>
+            c = c + 1;
+        }
+    </tbody>
 </table>
 
-
-
-
-@*<div id="myModalEliminar" class="modal fade-in" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <form method="post" role="form" action="..............">
-            <div class="modal-content teal white-text">
-                <p> Lorem ipsum dolor sit amet</p>
-                <input type="text" name="txtUserId" id="Id" value="" />
-            </div>
-            <div class="modal-footer  teal lighten-4">
-                <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
-                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
-            </div>
-        </form>
-    </div>*@
 
