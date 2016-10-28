@@ -56,7 +56,7 @@
                 </td>
                 <td>@Html.DisplayFor(modelItem => item.tituloActividad)</td>
                 <td>@Html.DisplayFor(modelItem => item.descripcionActividad)</td>
-                <td>@Html.DisplayFor(modelItem => item.fechaActividad)</td>
+                <td>@Html.DisplayFor(modelItem => item.fechaActividad.Date)</td>
                 <td>
                     <img class="materialboxed responsive-img" width="150" src="~/images/ImgActividades/@Html.DisplayFor(modelItem => item.imagenActividad)">
                     @Html.HiddenFor(modelItem => item.imagenActividad)
