@@ -86,7 +86,7 @@ namespace CapaPresentacion.Controllers
 
         [ValidateInput(false)]
         [HttpPost]
-        public ActionResult EditarActividad(entActividad a, HttpPostedFileBase archivo)
+        public ActionResult EditarActividad(entActividad a, HttpPostedFileBase archivo, String sh1, String sh2)
         {
             try
             {
@@ -99,6 +99,8 @@ namespace CapaPresentacion.Controllers
                     entActividad act = negActividad.Instancia.DevuelveActividad(Convert.ToInt16(a.idActividad));
                     a.imagenActividad = act.imagenActividad;
                 }
+                a.horaInicio = a.horaInicio + " " + sh1;
+                a.horaFin = a.horaFin + " " + sh2;
                 int i = negActividad.Instancia.InsUpdActividad(a, 2);
                 if (i > 0)
                 {
