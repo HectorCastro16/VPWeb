@@ -112,8 +112,7 @@ namespace CapaPresentacion.Controllers
                 {
                     entActividad act = negActividad.Instancia.DevuelveActividad(Convert.ToInt16(a.idActividad));
                     a.imagenActividad = act.imagenActividad;
-                }
-                
+                }                
 
                 if (sh1=="" || sh1==null) {
                     return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Inicio", identificador = 2 });
