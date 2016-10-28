@@ -56,9 +56,9 @@
                 </td>
                 <td>@Html.DisplayFor(modelItem => item.tituloActividad)</td>
                 <td>@Html.DisplayFor(modelItem => item.descripcionActividad)</td>
-                <td>@Html.DisplayFor(modelItem => item.fechaActividad.ToString("dd/MM/yyyy"))</td>
+                <td>@Html.DisplayFor(modelItem => item.fechaActividad)</td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.imagenActividad)
+                    <img class="materialboxed responsive-img" width="250" src="~/images/@Html.DisplayFor(modelItem => item.imagenActividad)">
                     @Html.HiddenFor(modelItem => item.imagenActividad)
                 </td>
                 <td>@Html.DisplayFor(modelItem => item.estadoActividad)</td>
