@@ -41,28 +41,39 @@ namespace CapaPresentacion.Controllers
 
             try
             {
-                if (archivo != null && archivo.ContentLength > 0){
+                if (archivo != null && archivo.ContentLength > 0)
+                {
                     a.imagenActividad = Path.GetFileName(archivo.FileName);
-                }else{
+                }
+                else
+                {
                     a.imagenActividad = "imgactividad.jpg";
-                }                
+                }
                 a.horaInicio = a.horaInicio + " " + sh1;
                 a.horaFin = a.horaFin + " " + sh2;
                 int i = negActividad.Instancia.InsUpdActividad(a, 1);
-                if (i > 0){
-                    if (archivo != null && archivo.ContentLength > 0){
+                if (i > 0)
+                {
+                    if (archivo != null && archivo.ContentLength > 0)
+                    {
                         var namearchivo = Path.GetFileName(archivo.FileName);
                         var ruta = Path.Combine(Server.MapPath("~/images/ImgActividades"), namearchivo);
                         archivo.SaveAs(ruta);
                     }
                     return RedirectToAction("ListActividades", new { mensaje = "SE INSERTO CORRECTAMENTE !", identificador = 3 });
-                }else{
+                }
+                else
+                {
                     return RedirectToAction("ListActividades", new { mensaje = "NO SE PUEDO REGISTRAR", identificador = 2 });
                 }
-            }catch (ApplicationException ex){
+            }
+            catch (ApplicationException ex)
+            {
                 ViewBag.mensaje = ex.Message;
                 return RedirectToAction("RegistroActividad", "Administrador", new { mensaje = ex.Message, identificador = 1 });
-            }catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 return RedirectToAction("RegistroActividad", "Administrador", new { mensaje = e.Message, identificador = 2 });
             }
         }
@@ -75,7 +86,7 @@ namespace CapaPresentacion.Controllers
             try
             {
                 entActividad a = negActividad.Instancia.DevuelveActividad(idActividad);
-                a.fechaActividad.ToString("dd/MM/yyyy");
+                a.fechaActividad.Date.ToShortDateString();
                 a.horaInicio = a.horaInicio.Remove(5, 5);
                 a.horaFin = a.horaFin.Remove(5, 5);
                 return View(a);
@@ -102,8 +113,19 @@ namespace CapaPresentacion.Controllers
                     entActividad act = negActividad.Instancia.DevuelveActividad(Convert.ToInt16(a.idActividad));
                     a.imagenActividad = act.imagenActividad;
                 }
-                a.horaInicio = a.horaInicio + " " + sh1;
-                a.horaFin = a.horaFin + " " + sh2;
+                
+
+                if (sh1=="") {
+                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Inicio", identificador = 2 });
+                }
+                else if (sh2=="") {
+                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Fin", identificador = 2 });
+                }
+                else {
+                    a.horaInicio = a.horaInicio + " " + sh1;
+                    a.horaFin = a.horaFin + " " + sh2;
+                }
+
                 int i = negActividad.Instancia.InsUpdActividad(a, 2);
                 if (i > 0)
                 {
@@ -123,25 +145,28 @@ namespace CapaPresentacion.Controllers
             catch (ApplicationException ex)
             {
                 ViewBag.mensaje = ex.Message;
-                return RedirectToAction("EditarActividad", "Administrador", new { mensaje = ex.Message, identificador = 1 });
+                return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = ex.Message, identificador = 1 });
             }
             catch (Exception e)
             {
-                return RedirectToAction("EditarActividad", "Administrador", new { idActividad=a.idActividad, mensaje = e.Message, identificador = 2 });
-            }     
+                return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = e.Message, identificador = 2 });
+            }
             //return View();        
         }
 
-        public ActionResult DeleteActividad(Int16 idActividad) {
+        public ActionResult DeleteActividad(Int16 idActividad)
+        {
 
             try
             {
-                
+
                 int i = negActividad.Instancia.DelActividad(idActividad, 3);
-                if (i > 0){
+                if (i > 0)
+                {
                     return RedirectToAction("ListActividades", new { mensaje = "SE ELIMINO CORRECTAMENTE !", identificador = 3 });
                 }
-                else {
+                else
+                {
                     return RedirectToAction("ListActividades", new { mensaje = "NO SE PUEDO ELIMINAR", identificador = 2 });
                 }
             }
@@ -156,11 +181,12 @@ namespace CapaPresentacion.Controllers
             }
         }
 
-        public ActionResult Pruebas() {
+        public ActionResult Pruebas()
+        {
             return View();
         }
 
-        
+
 
 
     }

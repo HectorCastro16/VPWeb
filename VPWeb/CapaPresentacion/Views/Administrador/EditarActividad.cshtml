@@ -1,5 +1,5 @@
 ﻿@model CapaEntidades.entActividad
-
+@using System;
 @{
     ViewBag.Title = "EditarActividad";
     Layout = "~/Views/MasterPage.cshtml";
@@ -43,7 +43,7 @@
                 </div>
                 <div class="section scrollspy  col s12 m4">
                     <label for="fechaActividad">Fecha Actividad</label>
-                    @Html.TextBoxFor(model => model.fechaActividad, new { @id = "fechaActividad", @class = "datepicker validate", @type = "text" })
+                    @Html.TextBoxFor(model => model.fechaActividad, "{0:dd MMMM, yyyy}", new { @id = "fechaActividad", @class = "datepicker validate", @type = "text" })
                 </div>
             </div>
             <br />
