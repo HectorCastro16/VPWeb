@@ -126,7 +126,7 @@
     <Content Include="css\style.css" />
     <Content Include="font\material-design-icons\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\649684.jpg" />
+    <Content Include="images\Parallax\649684.jpg" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\favicon\apple-touch-icon-152x152.png" />
     <Content Include="images\favicon\favicon-32x32.png" />
