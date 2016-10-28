@@ -23,7 +23,7 @@
 }
 
 <div class="row">
-    @using (Html.BeginForm("RegistroActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data", @class = "col s12" }))
+    @using (Html.BeginForm("RegistroActividad", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data", @class = "formValidate col s12" }))
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true)
