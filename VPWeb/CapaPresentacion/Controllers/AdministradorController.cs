@@ -115,10 +115,10 @@ namespace CapaPresentacion.Controllers
                 }
                 
 
-                if (sh1=="") {
+                if (sh1=="" || sh1==null) {
                     return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Inicio", identificador = 2 });
                 }
-                else if (sh2=="") {
+                else if (sh2=="" || sh2==null) {
                     return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Fin", identificador = 2 });
                 }
                 else {
