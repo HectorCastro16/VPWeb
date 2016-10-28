@@ -13,7 +13,6 @@ namespace CapaEntidades
         public int idActividad { get; set; }
         public String tituloActividad { get; set; }
         public String  descripcionActividad{ get; set; }
-        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
         public DateTime fechaActividad { get; set; }
         public String imagenActividad { get; set; }
         public String estadoActividad { get; set; }
