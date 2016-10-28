@@ -49,8 +49,21 @@ namespace CapaPresentacion.Controllers
                 {
                     a.imagenActividad = "imgactividad.jpg";
                 }
-                a.horaInicio = a.horaInicio + " " + sh1;
-                a.horaFin = a.horaFin + " " + sh2;
+
+                if (sh1 == "" || sh1 == null)
+                {
+                    return RedirectToAction("RegistroActividad", "Administrador", new { mensaje = "Porfavor Elegir Sistema Horario de Hora Inicio (A.M. - P.M.)", identificador = 2 });
+                }
+                else if (sh2 == "" || sh2 == null)
+                {
+                    return RedirectToAction("RegistroActividad", "Administrador", new { mensaje = "Porfavor Elegir Sistema Horario de Hora Fin (A.M. - P.M.)", identificador = 2 });
+                }
+                else
+                {
+                    a.horaInicio = a.horaInicio + " " + sh1;
+                    a.horaFin = a.horaFin + " " + sh2;
+                }
+
                 int i = negActividad.Instancia.InsUpdActividad(a, 1);
                 if (i > 0)
                 {
@@ -115,10 +128,10 @@ namespace CapaPresentacion.Controllers
                 }                
 
                 if (sh1=="" || sh1==null) {
-                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Inicio", identificador = 2 });
+                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor Confirme Sistema Horario de Hora Inicio (A.M. - P.M.)", identificador = 2 });
                 }
                 else if (sh2=="" || sh2==null) {
-                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor ingrese Sistema Horario - Hora Fin", identificador = 2 });
+                    return RedirectToAction("EditarActividad", "Administrador", new { idActividad = a.idActividad, mensaje = "Porfavor Confirme Sistema Horario de Hora Fin (A.M. - P.M.)", identificador = 2 });
                 }
                 else {
                     a.horaInicio = a.horaInicio + " " + sh1;
