@@ -101,14 +101,18 @@
                     </div>
                 </div>
             </div>
+            <br />
+            <div class="row">
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.estadoActividad, new { @id = "estadoActividad", @class = "validate", @type = "text" })
+                    <label for="estadoActividad" data-error="Incorrecto" data-success="Correcto">Estado de Actividad</label>
+                </div>
+            </div>
             <br /><br />
         </div>
         <p>
             <input type="submit" value="Save" />
         </p>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.estadoActividad)
-        </div>
 
             
     }
