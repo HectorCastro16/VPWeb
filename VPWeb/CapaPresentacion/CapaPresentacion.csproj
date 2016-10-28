@@ -130,7 +130,6 @@
     <Content Include="images\favicon\apple-touch-icon-152x152.png" />
     <Content Include="images\favicon\favicon-32x32.png" />
     <Content Include="images\generic-logo.png" />
-    <Content Include="images\hector.jpg" />
     <Content Include="images\ImgActividades\imgactividad.jpg" />
     <Content Include="images\ImgActividades\aniversario.jpg" />
     <Content Include="images\ImgActividades\visita.JPG" />
@@ -147,6 +146,7 @@
     <Content Include="images\signature-scan.png" />
     <Content Include="images\style_typography_roboto.png" />
     <Content Include="images\user-bg.jpg" />
+    <Content Include="images\user.png" />
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />

@@ -73,14 +73,14 @@
         </div>
         <!-- end header nav-->
     </header>
-        <!-- END HEADER -->
+    <!-- END HEADER -->
     <!-- //////////////////////////////////////////////////////////////////////////// -->
     <!-- START MAIN -->
     <div id="main">
         <!-- START WRAPPER -->
         <div class="wrapper">
             @{ entUsuario u = (entUsuario)Session["usuario"];
-                String nomCompleto = u.Nombres +" "+ u.Apellidos;
+                String nomCompleto = u.Nombres + " " + u.Apellidos;
             }
             <!-- START LEFT SIDEBAR NAV-->
             <aside id="left-sidebar-nav">
@@ -119,7 +119,7 @@
                     </li>
                     <li class="bold">
                         <a href="@Url.Action("Pruebas", "Administrador")" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Pruebas</a>
-                    </li>                    
+                    </li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only darken-2"><i class="mdi-navigation-menu"></i></a>
             </aside>
@@ -157,7 +157,7 @@
             </section>
             <!-- END CONTENT -->
             <!-- //////////////////////////////////////////////////////////////////////////// -->
-            
+
 
         </div>
         <!-- END WRAPPER -->
@@ -179,7 +179,7 @@
     Scripts
     ================================================ -->
     <!-- jQuery Library -->
-    <script type="text/javascript" src="~/js/jquery-1.11.2.min.js"></script>    
+    <script type="text/javascript" src="~/js/jquery-1.11.2.min.js"></script>
     <!--materialize js-->
     <script type="text/javascript" src="~/js/materialize.js"></script>
     <!--prism-->
