@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using CapaEntidades
+<!DOCTYPE html>
 <html lang="en">
 
 <!--================================================================================
@@ -78,7 +79,9 @@
     <div id="main">
         <!-- START WRAPPER -->
         <div class="wrapper">
-
+            @{ entUsuario u = (entUsuario)Session["usuario"];
+                String nomCompleto = u.Nombres +" "+ u.Apellidos;
+            }
             <!-- START LEFT SIDEBAR NAV-->
             <aside id="left-sidebar-nav">
                 <ul id="slide-out" class="side-nav fixed leftside-navigation">
@@ -106,7 +109,7 @@
                                         <a href="@Url.Action("Index", "Inicio")"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                                     </li>
                                 </ul>
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">@nomCompleto<i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <p class="user-roal">Administrator</p>
                             </div>
                         </div>
