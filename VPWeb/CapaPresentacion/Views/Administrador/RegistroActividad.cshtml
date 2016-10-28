@@ -10,13 +10,16 @@
 @{
     if (@ViewBag.mensaje != null)
     {
-        if (@ViewBag.identificador == 1){
+        if (@ViewBag.identificador == 1)
+        {
             <div class="card-panel lime accent-3"><strong>Atención!</strong> @ViewBag.mensaje</div>
         }
-        else if (@ViewBag.identificador == 2){
+        else if (@ViewBag.identificador == 2)
+        {
             <div class="card-panel red lighten-3" role="alert"><strong>Ooops!</strong> @ViewBag.mensaje</div>
         }
-        else if (@ViewBag.identificador == 3){
+        else if (@ViewBag.identificador == 3)
+        {
             <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
         }
     }
@@ -27,82 +30,86 @@
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true)
-        
-            <div class="card-panel">
-                <div class="row">
-                    <div class="input-field col s12 m4">
-                        @Html.TextBoxFor(model => model.tituloActividad, new { @id = "tituloActividad", @class = "validate", @type = "text" })
-                        <label for="tituloActividad" data-error="Incorrecto" data-success="Correcto">Titulo Actividad</label>
-                    </div>
-                    <div class="input-field col s12 m4">
-                        @Html.TextBoxFor(model => model.descripcionActividad, new { @id = "descripcionActividad", @class = "validate", @type = "text" })
-                        <label for="descripcionActividad" data-error="Incorrecto" data-success="Correcto">Descripcion Actividad</label>
-                    </div>
-                    <div class="section scrollspy  col s12 m4">
-                        <label for="fechaActividad">Fecha Actividad</label>
-                        @Html.TextBoxFor(model => model.fechaActividad, new { @id = "fechaActividad", @class = "datepicker validate", @type = "text" })
-                    </div>
+
+        <div class="card-panel">
+            <div class="row">
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.tituloActividad, new { @id = "tituloActividad", @class = "validate", @type = "text" })
+                    <label for="tituloActividad" data-error="Incorrecto" data-success="Correcto">Titulo Actividad</label>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="section scrollspy col s12 m4">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>File</span>
-                                <input type="file" name="archivo">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-field col s12 m4">
-                        @Html.TextBoxFor(model => model.direccionActividad, new { @id = "direccionActividad", @class = "validate", @type = "text" })
-                        <label for="direccionActividad" data-error="Incorrecto" data-success="Correcto">Direccion Actividad</label>
-                    </div>
-                    <div class="input-field col s12 m4">
-                        @Html.TextBoxFor(model => model.lugarInicio, new { @id = "lugarInicio", @class = "validate", @type = "text" })
-                        <label for="lugarInicio" data-error="Incorrecto" data-success="Correcto">Lugar Inicio</label>
-                    </div>
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.descripcionActividad, new { @id = "descripcionActividad", @class = "validate", @type = "text" })
+                    <label for="descripcionActividad" data-error="Incorrecto" data-success="Correcto">Descripcion Actividad</label>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="input-field col s12 m4">
-                        @Html.TextBoxFor(model => model.lugarFin, new { @id = "lugarFin", @class = "validate", @type = "text" })
-                        <label for="lugarFin" data-error="Incorrecto" data-success="Correcto">Lugar Fin</label>
-                    </div>
-                    <div class="section scrollspy col s12 m4">
-                        <div class="col s6">
-                            <label for="horaInicio" data-error="Incorrecto" data-success="Correcto">Hora Inicio</label>
-                            @Html.TextBoxFor(model => model.horaInicio, new { @id = "horaInicio", @type = "time", @class = "validate" })
-                        </div>
-                        <div class="input-field col s6">
-                            <select name="sh1" class="validate">
-                                <option value="" disabled selected>Elegir una opción</option>
-                                <option value="A.M.">A.M.</option>
-                                <option value="P.M.">P.M.</option>                                
-                            </select>
-                        </div>                        
-                    </div>
-                    <div class="section scrollspy col s12 m4">
-                        <div class="col s6">
-                            <label for="horaFin" data-error="Incorrecto" data-success="Correcto">Hora Fin</label>
-                            @Html.TextBoxFor(model => model.horaFin, new { @id = "horaFin", @type = "time", @class = "validate" })
-                        </div>
-                        <div class="input-field col s6" >
-                            <select name="sh2" class="validate">
-                                <option value="" disabled selected>Elegir una opción</option>
-                                <option value="A.M.">A.M.</option>
-                                <option value="P.M.">P.M.</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="section scrollspy  col s12 m4">
+                    <label for="fechaActividad">Fecha Actividad</label>
+                    @Html.TextBoxFor(model => model.fechaActividad, new { @id = "fechaActividad", @class = "datepicker validate", @type = "text" })
                 </div>
-                <br /><br />
             </div>
-            <p>
-                <input type="submit" value="GUARDAR" />
-            </p>        
+            <br />
+            <div class="row">
+                <div class="section scrollspy col s12 m4">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" name="archivo">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.direccionActividad, new { @id = "direccionActividad", @class = "validate", @type = "text" })
+                    <label for="direccionActividad" data-error="Incorrecto" data-success="Correcto">Direccion Actividad</label>
+                </div>
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.lugarInicio, new { @id = "lugarInicio", @class = "validate", @type = "text" })
+                    <label for="lugarInicio" data-error="Incorrecto" data-success="Correcto">Lugar Inicio</label>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="input-field col s12 m4">
+                    @Html.TextBoxFor(model => model.lugarFin, new { @id = "lugarFin", @class = "validate", @type = "text" })
+                    <label for="lugarFin" data-error="Incorrecto" data-success="Correcto">Lugar Fin</label>
+                </div>
+                <div class="section scrollspy col s12 m4">
+                    <div class="col s6">
+                        <label for="horaInicio" data-error="Incorrecto" data-success="Correcto">Hora Inicio</label>
+                        @Html.TextBoxFor(model => model.horaInicio, new { @id = "horaInicio", @type = "time", @class = "validate" })
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="sh1" class="validate">
+                            <option value="" disabled selected>Elegir una opción</option>
+                            <option value="A.M.">A.M.</option>
+                            <option value="P.M.">P.M.</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section scrollspy col s12 m4">
+                    <div class="col s6">
+                        <label for="horaFin" data-error="Incorrecto" data-success="Correcto">Hora Fin</label>
+                        @Html.TextBoxFor(model => model.horaFin, new { @id = "horaFin", @type = "time", @class = "validate" })
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="sh2" class="validate">
+                            <option value="" disabled selected>Elegir una opción</option>
+                            <option value="A.M.">A.M.</option>
+                            <option value="P.M.">P.M.</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <button class="btn cyan waves-effect waves-light right" type="submit" name="action">
+                Submit
+                <i class="mdi-content-send right"></i>
+            </button>
+        </div>
+            @*<p>
+                    <input type="submit" value="GUARDAR" />
+                </p>*@
     }
 </div>
 <div>
