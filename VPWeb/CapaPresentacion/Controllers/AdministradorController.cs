@@ -75,6 +75,8 @@ namespace CapaPresentacion.Controllers
             try
             {
                 entActividad a = negActividad.Instancia.DevuelveActividad(idActividad);
+                a.horaInicio = a.horaInicio.Remove(5, 5);
+                a.horaFin = a.horaFin.Remove(5, 5);
                 return View(a);
             }
             catch (Exception e)
