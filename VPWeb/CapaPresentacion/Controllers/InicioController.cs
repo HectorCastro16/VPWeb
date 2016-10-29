@@ -17,7 +17,7 @@ namespace CapaPresentacion.Controllers
         public ActionResult Index(String mensaje)
         {
             ViewBag.mensaje = mensaje;
-            List<entActividad> lista = negActividad.Instancia.ListaActividades();
+            List<entActividad> lista = negActividad.Instancia.ListaTopActividades();
             return View(lista);
         }
 

@@ -115,6 +115,19 @@ namespace CapaNegocio
             }
         }
 
+        public List<entActividad> ListaTopActividades()
+        {
+            try
+            {
+                return datActividad.Instancia.ListaTopActividades();
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
         #endregion metodos
 
     }
