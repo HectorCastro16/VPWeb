@@ -251,7 +251,7 @@
     <Content Include="Views\Administrador\PrincipalAdministrador.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\MasterPage.cshtml" />
+    <Content Include="Views\MasterPageIntranet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Administrador\ListActividades.cshtml" />
