@@ -51,5 +51,11 @@ namespace CapaPresentacion.Controllers
             }
         }
 
+        public ActionResult Conocenos() {
+
+            return View();
+
+        }
+
     }
 }
