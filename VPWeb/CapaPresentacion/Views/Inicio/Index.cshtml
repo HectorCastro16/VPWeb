@@ -53,37 +53,26 @@
     <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
-            @*<nav class="cyan">
-                <div class="nav-wrapper">
-                    <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1>
-                    <ul class="right hide-on-med-and-down">
-                        <li class="search-out"><input type="text" class="search-out-text">                        </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a></li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a></li>
-                        <li><a href="@Url.Action("Login")" class="waves-effect waves-block waves-light">Intranet</a></li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li class="search-out"><input type="text" class="search-out-text">                        </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a></li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a></li>
-                        <li><a href="@Url.Action("Login")" class="waves-effect waves-block waves-light">Intranet</a></li>
-                    </ul>
-                </div>
-            </nav>*@
             <nav class="cyan">
                 <div class="nav-wrapper">
                     <div class="col s12">
                         <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1>
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                         <ul class="right hide-on-med-and-down">
-                            <li class="search-out"><input type="text" class="search-out-text">                        </li>
+                            <li><a href="@Url.Action("Index")" class="waves-effect waves-block waves-light">Home</a></li>
+                            <li><a href="@Url.Action("Conocenos")" class="waves-effect waves-block waves-light">Conócenos</a></li>
+
+                            <li class="search-out"><input type="text" class="search-out-text"></li>
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a></li>
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a></li>
                             <li><a href="@Url.Action("Login")" class="waves-effect waves-block waves-light">Intranet</a></li>
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
                             <li class="search-out"><br /></li>
-                            <li><br /></li>                            
+                            <li><br /></li>
+                            <li><a href="@Url.Action("Index")" class="waves-effect waves-block waves-light">Home</a></li>  
+                            <li><a href="@Url.Action("Index")" class="waves-effect waves-block waves-light">Conócenos</a></li>
+                                          
                             <li><a href="@Url.Action("Login")" class="waves-effect waves-block waves-light">Intranet</a></li>
                         </ul>
                     </div>
