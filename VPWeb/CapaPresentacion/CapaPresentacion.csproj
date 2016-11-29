@@ -151,9 +151,11 @@
     <Content Include="images\pic_admin.png" />
     <Content Include="images\sample-1.jpg" />
     <Content Include="images\signature-scan.png" />
+    <Content Include="images\sm.jpg" />
     <Content Include="images\style_typography_roboto.png" />
     <Content Include="images\user-bg.jpg" />
     <Content Include="images\user.png" />
+    <Content Include="images\vp.jpg" />
     <Content Include="js\jquery-1.11.2.min.js" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
