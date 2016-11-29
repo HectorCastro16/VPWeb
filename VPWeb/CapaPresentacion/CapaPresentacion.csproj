@@ -132,8 +132,11 @@
     <Content Include="font\material-design-icons\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\avatar.jpg" />
+    <Content Include="images\ca.jpg" />
+    <Content Include="images\dg.jpg" />
     <Content Include="images\favicon\apple-touch-icon-152x152.png" />
     <Content Include="images\favicon\favicon-32x32.png" />
+    <Content Include="images\gc.jpg" />
     <Content Include="images\generic-logo.png" />
     <Content Include="images\ImgActividades\imgactividad.jpg" />
     <Content Include="images\ImgActividades\aniversario.jpg" />
@@ -149,6 +152,7 @@
     <Content Include="images\Parallax\virgen2.jpg" />
     <Content Include="images\Parallax\virgen3.jpg" />
     <Content Include="images\pic_admin.png" />
+    <Content Include="images\s.jpg" />
     <Content Include="images\sample-1.jpg" />
     <Content Include="images\signature-scan.png" />
     <Content Include="images\sm.jpg" />
