@@ -8,9 +8,10 @@
 
 @{ List<entActividad> lista = ViewBag.ListActividades;}
 
-@foreach (var item in lista)
-{
-    <div class="row">
+<div class="row">
+    @foreach (var item in lista)
+    {
+
         <div class="col s4">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -25,9 +26,11 @@
                     <p>@item.descripcionActividad</p>
                 </div>
             </div>
-        </div>    
-    </div>
-}
+        </div>
+    }
+</div>
+
+
 
 
 
