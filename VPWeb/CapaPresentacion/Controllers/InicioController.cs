@@ -59,6 +59,8 @@ namespace CapaPresentacion.Controllers
 
         public ActionResult TodasActividades() {
 
+            List<entActividad> Lista = negActividad.Instancia.ListaActividades();
+            ViewBag.ListActividades = Lista;
             return View();
 
         }
