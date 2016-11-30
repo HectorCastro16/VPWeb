@@ -164,6 +164,7 @@ namespace CapaAccesoDatos
                     a.lugarFin = dr["lugarFin"].ToString();
                     a.horaInicio = dr["horaInicio"].ToString();
                     a.horaFin = dr["horaFin"].ToString();
+                    a.Asistentes = Convert.ToInt32(dr["Asistentes"]);
                 }
             }
             catch (Exception e)

@@ -22,5 +22,6 @@ namespace CapaEntidades
         public String horaInicio{ get; set; }
         public String horaFin { get; set; }
         public Boolean Anulado{ get; set; }
+        public int Asistentes { get; set; }
     }
 }

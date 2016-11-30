@@ -71,5 +71,22 @@ namespace CapaPresentacion.Controllers
         
         }
 
+        [ValidateInput(false)]
+        public ActionResult DetalleActividadExtranet(Int16 idActividad, String mensaje, Int16? identificador)
+        {
+            ViewBag.mensaje = mensaje;
+            ViewBag.identificador = identificador;
+            try
+            {
+                entActividad a = negActividad.Instancia.DevuelveActividad(idActividad);
+                return View(a);
+            }
+            catch (Exception e)
+            {
+
+                return RedirectToAction("TodasActividades", new { mensaje = e, identificador = 2 });
+            }
+        }
+
     }
 }
