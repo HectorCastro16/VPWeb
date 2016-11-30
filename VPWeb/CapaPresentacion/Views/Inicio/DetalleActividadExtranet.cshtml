@@ -5,9 +5,6 @@
     Layout = "~/Views/MasterPageExtranet.cshtml";
 }
 
-@*<h2>@Model.tituloActividad</h2>
-<br />
-@Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })*@
 
 <div class="row">
     <div class="col s12">
@@ -25,36 +22,36 @@
                 <p>@Model.descripcionActividad</p>
                 <div class="row">
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Lugar de Inicio de Actividad: @Model.lugarInicio</p>
                     </div>
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Lugar de Fin de Actividad: @Model.lugarFin</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Fecha de Actividad: @Model.fechaActividad.ToString("dd/MM/yyyy")</p>
                     </div>
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Estado de Actividad: @Model.estadoActividad</p>
                     </div>
-                </div>
+                </div>                
                 <div class="row">
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Hora de Inicio de Actividad: @Model.horaInicio</p>
                     </div>
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Hora de Fin de Actividad: @Model.horaFin</p>
                     </div>
-                </div>
+                </div> 
                 <div class="row">
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Dirección de Actividad: @Model.direccionActividad</p>
                     </div>
                     <div class="col s12 m6">
-                        <p>@Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p></p>
                     </div>
-                </div>
+                </div>               
             </div>
             <div class="card-action">
                 @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })                
