@@ -22,7 +22,6 @@
                         </div>
                         <div class="row center">
                             @Html.ActionLink("Detalle Actividad", "DetalleActividadExtranet", new { idActividad = m.idActividad }, new { @class = "btn-large waves-light" })
-                            @*<a href="#" id="download-button" class="btn-large waves-light">Detalle Actividad</a>*@
                         </div>
                         <br><br>
 
@@ -36,6 +35,7 @@
                 <div class="row container">
                     <h2 class="header">@Html.DisplayFor(modelItem => m.tituloActividad)</h2>
                     <p class="grey-text text-darken-3 lighten-3">@Html.DisplayFor(modelItem => m.descripcionActividad)</p>
+                    <p class="grey-text text-darken-3 lighten-3 right">@m.fechaActividad.ToString("dd/MM/yyyy"))</p>
                 </div>
             </div>
             cant += 1;

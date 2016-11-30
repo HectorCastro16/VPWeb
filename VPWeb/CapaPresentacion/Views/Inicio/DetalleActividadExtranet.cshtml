@@ -20,9 +20,8 @@
             <div class="card-content">
                 <p>@Model.descripcionActividad</p>
             </div>
-            <div class="card-action">
-                @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })
-                <a href="#">This is a link</a>
+            <div class="card-action right">
+                @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })                
             </div>
         </div>
     </div>
