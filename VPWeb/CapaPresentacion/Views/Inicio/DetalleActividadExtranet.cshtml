@@ -11,17 +11,19 @@
 
 
 <div class="row">
-    <div class="card large">
-        <div class="card-image">
-            <img src="~/images/sample-1.jpg" alt="sample">
-            <span class="card-title">@Model.tituloActividad</span>
-        </div>
-        <div class="card-content">
-            <p>@Model.descripcionActividad</p>
-        </div>
-        <div class="card-action">
-            @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })
-            <a href="#">This is a link</a>
+    <div class="col s12">
+        <div class="card large">
+            <div class="card-image">
+                <img src="~/images/sample-1.jpg" alt="sample">
+                <span class="card-title">@Model.tituloActividad</span>
+            </div>
+            <div class="card-content">
+                <p>@Model.descripcionActividad</p>
+            </div>
+            <div class="card-action">
+                @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })
+                <a href="#">This is a link</a>
+            </div>
         </div>
     </div>
 </div>
