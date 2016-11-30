@@ -86,6 +86,13 @@
     <!-- END HEADER -->
     <!-- //////////////////////////////////////////////////////////////////////////// -->
     <!-- START MAIN -->
+    @{if (ViewBag.mensaje != null)
+    {
+        <center>
+            <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
+        </center>
+    }
+    }
     <div>
         <!-- START WRAPPER -->
         <div>
@@ -93,14 +100,7 @@
             <!-- //////////////////////////////////////////////////////////////////////////// -->
             <!-- START CONTENT -->
             <section id="content">
-                <!--start container-->
-                @{if (ViewBag.mensaje != null )
-                {
-                    <center>
-                        <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
-                    </center>
-                }
-                }
+                <!--start container-->               
                 <section>
                     @RenderBody()
                 </section>
@@ -115,7 +115,7 @@
     <!-- END MAIN -->
     <!-- //////////////////////////////////////////////////////////////////////////// -->
     <!-- START FOOTER -->
-    <br /><br />
+    <br /><hr /><br />
     <div>
         <div class="container">
             <div class="row">
