@@ -31,10 +31,10 @@
                 </div>
                 <div class="row">
                     <div class="col s12 m6">
-                        <p>Fecha de Actividad: @Model.fechaActividad.ToString("dd/MM/yyyy")</p>
+                        <p>Dirección de Actividad: @Model.direccionActividad</p>
                     </div>
                     <div class="col s12 m6">
-                        <p>Estado de Actividad: @Model.estadoActividad</p>
+                        <p>Fecha de Actividad: @Model.fechaActividad.ToString("dd/MM/yyyy")</p>
                     </div>
                 </div>                
                 <div class="row">
@@ -45,14 +45,7 @@
                         <p>Hora de Fin de Actividad: @Model.horaFin</p>
                     </div>
                 </div> 
-                <div class="row">
-                    <div class="col s12 m6">
-                        <p>Dirección de Actividad: @Model.direccionActividad</p>
-                    </div>
-                    <div class="col s12 m6">
-                        <p></p>
-                    </div>
-                </div>               
+                <div class="row"></div>               
             </div>
             <div class="card-action">
                 @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })                
