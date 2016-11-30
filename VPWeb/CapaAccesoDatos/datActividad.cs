@@ -129,7 +129,6 @@ namespace CapaAccesoDatos
             }
             catch (Exception e)
             {
-
                 throw e;
             }
             finally {
@@ -137,6 +136,35 @@ namespace CapaAccesoDatos
             }
 
         }
+
+        public int IncrementaAsistencias(int idActividad) {
+            SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spIncrementaAsistencias", cn);
+                cmd.Parameters.AddWithValue("@prmtrIntIdActL", idActividad);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter m = new SqlParameter("@retorna", DbType.Int32);
+                m.Direction = ParameterDirection.ReturnValue;
+                cmd.Parameters.Add(m);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+                int i = Convert.ToInt32(cmd.Parameters["@retorna"].Value);
+                return i;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+        
+        }
+
 
         public entActividad DevuelveActividad(Int16 idActividad) {
             SqlCommand cmd = null;
@@ -182,7 +210,6 @@ namespace CapaAccesoDatos
 
         public List<entActividad> ListaTopActividades()
         {
-
             SqlCommand cmd = null;
             SqlDataReader dr = null;
             List<entActividad> Lista = null;

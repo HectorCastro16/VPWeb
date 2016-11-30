@@ -104,6 +104,18 @@ namespace CapaNegocio
             }
         }
 
+        public int IncrementaAsistencias(int idActividad) {
+
+            try
+            {
+                return datActividad.Instancia.IncrementaAsistencias(idActividad);
+            }
+            catch (Exception e)
+            {
+                
+                throw e;
+            }
+        }
         public entActividad DevuelveActividad(Int16 idActividad ) {
             try
             {

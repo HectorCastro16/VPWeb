@@ -88,5 +88,12 @@ namespace CapaPresentacion.Controllers
             }
         }
 
+        public ActionResult IncrementaAsistencias(int idActividad) {
+
+            int i = negActividad.Instancia.IncrementaAsistencias(idActividad);
+
+            return RedirectToAction("Index", "Inicio");
+        }
+
     }
 }
