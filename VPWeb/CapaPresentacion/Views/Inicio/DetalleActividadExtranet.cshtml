@@ -14,13 +14,13 @@
     <div class="col s12">
         <div class="card large">
             <div class="card-image">
-                <img src="~/images/sample-1.jpg" alt="sample">
+                <img src="~/images/ImgActividades/@Model.imagenActividad" alt="sample" class="responsive-img">
                 <span class="card-title">@Model.tituloActividad</span>
             </div>
             <div class="card-content">
                 <p>@Model.descripcionActividad</p>
             </div>
-            <div class="card-action right">
+            <div class="card-action">
                 @Html.ActionLink("ASISTIRÉ", "IncrementaAsistencias", new { idActividad = Model.idActividad })                
             </div>
         </div>
