@@ -92,8 +92,13 @@
             <!-- START CONTENT -->
             <section id="content">
                 <!--start container-->
+                @{if (ViewBag.mensaje != null )
+                {
+                    <div class="card-panel light-green lighten-2" role="alert"><strong>Atención!</strong> @ViewBag.mensaje</div>
+                }
+                }
                 <section>
-                        @RenderBody()                    
+                    @RenderBody()
                 </section>
 
                 <!--end container-->
@@ -162,15 +167,7 @@
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="~/js/plugins.js"></script>
 
-    @{String msj = ViewBag.Mensaje;
-    if (msj != null && msj != "")
-    {
-    <script>
-        var $toastContent = $(msj);
-        Materialize.toast($toastContent, 5000);
-    </script>
-    }
-    }
+    
 
     <script>
         $(document).ready(function () {
