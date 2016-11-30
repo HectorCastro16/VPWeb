@@ -7,14 +7,6 @@
 }
 
 @{
-    String msj = ViewBag.Mensaje;
-    if (msj != null && msj != "")
-    {
-        <script>
-            var $toastContent = $(msj);
-            Materialize.toast($toastContent, 5000);
-        </script>
-    }
     int cant = 0;
     foreach (var m in Model)
     {
