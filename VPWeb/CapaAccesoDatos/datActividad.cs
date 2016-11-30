@@ -143,7 +143,7 @@ namespace CapaAccesoDatos
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spIncrementaAsistencias", cn);
-                cmd.Parameters.AddWithValue("@prmtrIntIdActL", idActividad);
+                cmd.Parameters.AddWithValue("@prmtrIntIdAct", idActividad);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter m = new SqlParameter("@retorna", DbType.Int32);
                 m.Direction = ParameterDirection.ReturnValue;
