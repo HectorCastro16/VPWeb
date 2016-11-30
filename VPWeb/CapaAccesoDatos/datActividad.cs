@@ -150,7 +150,6 @@ namespace CapaAccesoDatos
                 cmd.Parameters.Add(m);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-
                 int i = Convert.ToInt32(cmd.Parameters["@retorna"].Value);
                 return i;
             }
@@ -162,7 +161,6 @@ namespace CapaAccesoDatos
             {
                 cmd.Connection.Close();
             }
-        
         }
 
 
