@@ -144,6 +144,13 @@
     <Content Include="images\ImgActividades\visita.JPG" />
     <Content Include="images\login-logo.png" />
     <Content Include="images\materialize-logo.png" />
+    <Content Include="images\nuestrasActividades\dpj.jpg" />
+    <Content Include="images\nuestrasActividades\hsm.jpg" />
+    <Content Include="images\nuestrasActividades\hvp.jpg" />
+    <Content Include="images\nuestrasActividades\ip.jpg" />
+    <Content Include="images\nuestrasActividades\mm.jpg" />
+    <Content Include="images\nuestrasActividades\mr.jpg" />
+    <Content Include="images\nuestrasActividades\vc.jpg" />
     <Content Include="images\office.jpg" />
     <Content Include="images\Parallax\649684.jpg" />
     <Content Include="images\Parallax\hermandad.jpg" />
