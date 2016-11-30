@@ -92,7 +92,7 @@ namespace CapaPresentacion.Controllers
 
             int i = negActividad.Instancia.IncrementaAsistencias(idActividad);
 
-            return RedirectToAction("Index", "Inicio", new { mensaje = "Gracias Por Confirmar Asistencia" });
+            return RedirectToAction("Index", "Inicio", new { mensaje = "Gracias por confirmar asistencia! (n_n)/" });
         }
 
         public ActionResult Galeria() {
