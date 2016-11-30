@@ -276,6 +276,7 @@
     <Content Include="Views\MasterPageExtranet.cshtml" />
     <Content Include="Views\Inicio\Conocenos.cshtml" />
     <Content Include="Views\Inicio\TodasActividades.cshtml" />
+    <Content Include="Views\Inicio\NuestrasActividades.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

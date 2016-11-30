@@ -65,5 +65,11 @@ namespace CapaPresentacion.Controllers
 
         }
 
+        public ActionResult NuestrasActividades() {
+
+            return View();
+        
+        }
+
     }
 }
