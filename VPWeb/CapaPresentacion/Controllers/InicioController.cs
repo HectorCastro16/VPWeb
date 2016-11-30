@@ -95,5 +95,11 @@ namespace CapaPresentacion.Controllers
             return RedirectToAction("Index", "Inicio", new { mensaje = "Gracias Por Confirmar Asistencia" });
         }
 
+        public ActionResult Galeria() {
+
+            return View();
+        
+        }
+
     }
 }

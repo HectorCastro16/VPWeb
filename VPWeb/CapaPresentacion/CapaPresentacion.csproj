@@ -279,6 +279,7 @@
     <Content Include="Views\Inicio\TodasActividades.cshtml" />
     <Content Include="Views\Inicio\NuestrasActividades.cshtml" />
     <Content Include="Views\Inicio\DetalleActividadExtranet.cshtml" />
+    <Content Include="Views\Inicio\Galeria.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
