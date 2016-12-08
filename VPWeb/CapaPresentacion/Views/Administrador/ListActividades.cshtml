@@ -55,7 +55,7 @@
                     @c
                 </td>
                 <td>@Html.DisplayFor(modelItem => item.tituloActividad)</td>
-                <td>@item.descripcionActividad.Substring(0,25)</td>
+                <td>@item.descripcionActividad.Substring(0,25)...</td>
                 <td>@item.fechaActividad.ToString("dd/MM/yyyy")</td>
                 <td>
                     <img class="materialboxed responsive-img" width="150" src="~/images/ImgActividades/@Html.DisplayFor(modelItem => item.imagenActividad)">
