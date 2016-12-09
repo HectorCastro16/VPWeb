@@ -195,7 +195,18 @@ namespace CapaPresentacion.Controllers
 
         public ActionResult Pruebas()
         {
-            return View();
+            try
+            {
+                List<entActividad> Lista = negActividad.Instancia.ListaActividades();
+                ViewBag.Lista = Lista;
+                return View();
+            }
+            catch (Exception e)
+            {
+                
+                throw e;
+            }
+            
         }
 
 
