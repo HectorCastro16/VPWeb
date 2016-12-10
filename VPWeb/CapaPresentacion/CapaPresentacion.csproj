@@ -136,6 +136,13 @@
     <Content Include="images\dg.jpg" />
     <Content Include="images\favicon\apple-touch-icon-152x152.png" />
     <Content Include="images\favicon\favicon-32x32.png" />
+    <Content Include="images\Galeria\1q.jpg" />
+    <Content Include="images\Galeria\2q.jpg" />
+    <Content Include="images\Galeria\3q.jpg" />
+    <Content Include="images\Galeria\4q.jpg" />
+    <Content Include="images\Galeria\5q.jpg" />
+    <Content Include="images\Galeria\6q.jpg" />
+    <Content Include="images\Galeria\7q.jpg" />
     <Content Include="images\gc.jpg" />
     <Content Include="images\generic-logo.png" />
     <Content Include="images\ImgActividades\1448698.jpg" />
