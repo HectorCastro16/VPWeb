@@ -17,13 +17,14 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">@item.tituloActividad.Substring(0,25)...<i class="mdi-navigation-more-vert right"></i></span>
-                    <p>@item.fechaActividad.ToString("dd/MM/yyyy")</p>
+                    <p class="right-align">@item.fechaActividad.ToString("dd/MM/yyyy")</p>
                     <p>@Html.ActionLink("Detalle Actividad", "DetalleActividadExtranet", new { idActividad = item.idActividad })</p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">@item.tituloActividad<i class="mdi-navigation-close right"></i></span>
                     <p>@item.descripcionActividad</p>
-                    <p>@item.fechaActividad.ToString("dd/MM/yyyy")</p>
+                    <p></p>
+                    <p class="right-align">@item.fechaActividad.ToString("dd/MM/yyyy")</p>
                 </div>
             </div>
         </div>
